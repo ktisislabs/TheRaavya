@@ -7,24 +7,29 @@ import { IoHeart } from "react-icons/io5";
 function Navbar() {
   return (
     <>
-      <nav className='Navbar-container  flex items-center justify-between w-screen p-0 m-0 absolute '>
-      <div className='flex items-center gap-12'>
-       <img src={Logo} alt="raavya-logo" className='w-36'></img>
+      <nav className='Navbar-container  flex items-center justify-center w-screen p-0 m-0 fixed
+      bg-white 
+       '>
+      
+       <div className='flex items-center gap-12 p-2'>
+     
     
       
-         <p className='font-poppins text-white text-md font-semibold'>About</p>
-        <p className='font-poppins text-white text-md font-semibold'>Products</p>
-        <p className='font-poppins text-white text-md font-semibold'>Bulk Order</p>
-        <p className='font-poppins text-white text-md font-semibold'>Contact</p> 
-       
-       </div>
-       <div className='flex items-center gap-12 mr-12'>
-       <FaCartShopping  className='text-white text-xl'/>
-       <IoHeart  className='text-white text-xl'/>
+         <p className='font-poppins text-black text-sm font-medium'>About</p>
+        <p className='font-poppins text-black text-sm font-medium'>Products</p>
+        <p className='font-poppins text-black text-sm font-medium'>Bulk Order</p>
+        <p className='font-poppins text-black text-sm font-medium'>Contact</p> 
+        <div className='flex items-center gap-12 mr-12'>
+      
+      <FaCartShopping  className='text-black text-sm'/>
+      <IoHeart  className='text-black text-sm'/>
 
-
-       </div>
+     </div> 
+      
+       </div> 
        
+      
+        
     
       </nav>
     </>

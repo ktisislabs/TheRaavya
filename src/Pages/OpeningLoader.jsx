@@ -27,11 +27,6 @@ function OpeningLoader() {
     }
   },[])
 
-
-
-
-
-
   return (
    <>
           <div className='OpeningLoader-Container w-screen h-screen bg-[#978080] flex flex-col items-center justify-center'>

@@ -8,21 +8,21 @@ function Navbar() {
   return (
     <>
       <nav className='Navbar-container  flex items-center justify-center w-screen p-0 m-0 fixed
-      bg-white 
+      bg-[#9c8276]
        '>
       
        <div className='flex items-center gap-12 p-2'>
      
     
       
-         <p className='font-poppins text-black text-sm font-medium'>About</p>
-        <p className='font-poppins text-black text-sm font-medium'>Products</p>
-        <p className='font-poppins text-black text-sm font-medium'>Bulk Order</p>
-        <p className='font-poppins text-black text-sm font-medium'>Contact</p> 
+         <p className='font-poppins text-white text-sm font-medium'>About</p>
+        <p className='font-poppins text-white text-sm font-medium'>Products</p>
+        <p className='font-poppins text-white text-sm font-medium'>Bulk Order</p>
+        <p className='font-poppins text-white text-sm font-medium'>Contact</p> 
         <div className='flex items-center gap-12 mr-12'>
       
-      <FaCartShopping  className='text-black text-sm'/>
-      <IoHeart  className='text-black text-sm'/>
+      <FaCartShopping  className='text-white text-sm'/>
+      <IoHeart  className='text-white text-sm'/>
 
      </div> 
       

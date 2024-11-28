@@ -6,6 +6,7 @@ import NameImage from '../Assets/text-logo.png';
 import { RxHamburgerMenu } from "react-icons/rx";
 import Mainlogo from '../Assets/Mainlogo.png';
 import { FaAmazon } from "react-icons/fa";
+import Footer from '../components/Footer';
 
 function Home() {
   return (
@@ -66,6 +67,7 @@ function Home() {
             
           </div>
         </section>
+        <Footer/>
       </div>
     </>
   );

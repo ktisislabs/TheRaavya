@@ -39,3 +39,15 @@
   background-position: center;
   background-attachment: fixed;
 }
+.Section-3-container{
+  background-image: url('../src/Assets/section3.jpg'); /* Correct path to your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.Section-4-container{
+  background-image: url('../src/Assets/section4.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

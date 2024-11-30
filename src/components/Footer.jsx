@@ -9,7 +9,7 @@ import { FaFacebookF } from "react-icons/fa6";
 function Footer() {
   return (
     <footer className="Footer-Section w-screen bg-[#9c8276] p-12 text-white">
-      <div className="max-w-7xl mx-auto flex items-start justify-between">
+      <div className="max-w-7xl mx-auto flex items-start justify-between ">
         {/* Logo and Email Section */}
         <div className="Footer-1 flex flex-col gap-4">
           <img src={Mainlogo} alt="Logo" className="w-36 mx-auto" />
@@ -31,7 +31,6 @@ function Footer() {
           <h3 className="text-lg font-bold">Pages</h3>
           <ul className="space-y-2">
             <li>About</li>
-            <li>Products</li>
             <li>Bulk Order</li>
             <li>Contact</li>
           </ul>

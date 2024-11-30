@@ -14,7 +14,7 @@ function Navbar() {
        <div className='Navbar flex items-center ml-14 gap-12 p-2'>
      
     
-      
+       <Link to='/'> <p className='font-poppins text-white text-sm font-medium'>Home</p></Link>
         <Link to='/About'> <p className='font-poppins text-white text-sm font-medium'>About</p></Link>
         <Link to='/HomeDecor'> <p className='font-poppins text-white text-sm font-medium'>Home Decor</p></Link>
         <Link to='/Furniture'> <p className='font-poppins text-white text-sm font-medium'>Furniture</p></Link>
@@ -23,7 +23,7 @@ function Navbar() {
        
         <div className='flex items-center gap-12 mr-12'>
       
-      <FaCartShopping  className='text-white text-sm'/>
+      <span className="flex items-center font-mono font-bold text-white gap-1"><FaCartShopping  className='text-white text-sm '/>(0)</span>
       <IoHeart  className='text-white text-sm'/>
 
      </div> 

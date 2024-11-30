@@ -35,3 +35,10 @@
   background-position: center;
   background-attachment: fixed;
 }
+.About-Section{
+  background-image: url('../src/Assets/About.jpg'); 
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}

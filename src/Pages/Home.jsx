@@ -17,7 +17,7 @@ function Home() {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
-    setOpenMenu(!openMenu); // Toggle the menu
+    setOpenMenu(!openMenu); 
   };
 
   return (

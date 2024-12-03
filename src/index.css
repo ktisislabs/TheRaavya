@@ -35,3 +35,11 @@
   background-position: center;
   background-attachment: fixed;
 }
+.contact-bgsection{
+  background-image: url('../src/Assets/contact.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+ 
+
+}

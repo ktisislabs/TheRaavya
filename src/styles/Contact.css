@@ -1,0 +1,41 @@
+@media(max-width:320px){
+    .Hammenu{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        justify-content: end;
+        background-color: #9c8276;
+        position: fixed;
+    }
+}
+
+@media(max-width:375px){
+    .Hammenu{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        justify-content: end;
+        background-color: #9c8276;
+        position: fixed;
+    }
+}
+@media(max-width:414px){
+    .Hammenu{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        justify-content: end;
+        background-color: #9c8276;
+        position: fixed;
+    }
+}
+@media(max-width:430px){
+    .Hammenu{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        justify-content: end;
+        background-color: #9c8276;
+        position: fixed;
+    }
+}

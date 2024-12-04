@@ -16,8 +16,7 @@ function Navbar() {
     
        <Link to='/'> <p className='font-poppins text-white text-sm font-medium'>Home</p></Link>
         <Link to='/About'> <p className='font-poppins text-white text-sm font-medium'>About</p></Link>
-        <Link to='/HomeDecor'> <p className='font-poppins text-white text-sm font-medium'>Home Decor</p></Link>
-        <Link to='/Furniture'> <p className='font-poppins text-white text-sm font-medium'>Furniture</p></Link>
+        <Link to='/HomeDecor'> <p className='font-poppins text-white text-sm font-medium'>Products</p></Link>
         <Link to='/BulkOrder'> <p className='font-poppins text-white text-sm font-medium'>Bulk Order</p></Link>
         <Link to='/Contact'> <p className='font-poppins text-white text-sm font-medium'>Contact</p></Link>
        

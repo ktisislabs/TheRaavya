@@ -13,6 +13,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoHeart } from "react-icons/io5";
 import Footer from '../components/Footer'
 
+
 function Home() {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -37,6 +38,10 @@ function Home() {
 
           <div className="Hero-Section text-white text-center flex items-center flex-col justify-center h-full">
             <img src={Mainlogo} className="w-36" alt="Main Logo" />
+
+    
+
+
             <img
               src={NameImage}
               alt="TheRaavya"

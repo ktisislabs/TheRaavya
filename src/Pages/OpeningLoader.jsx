@@ -3,6 +3,7 @@ import Logo from '../Assets/Mainlogo.png' ;
 import '../styles/Loader.css'
 import {useNavigate} from 'react-router-dom'
 
+
 function OpeningLoader() {
 
   const [loader,setLoader] = useState(0) ; 
@@ -31,6 +32,7 @@ function OpeningLoader() {
    <>
           <div className='OpeningLoader-Container w-screen h-screen bg-[#9c8276] flex flex-col items-center justify-center'>
            <img src={Logo} alt="OpeningLogo-image" className='OpeningLogo-image w-60'></img> 
+          
            <div className='Loader-container w-[15vw] sm:w-[15vw] h-[5px] bg-slate-300 rounded-xl'>
             <div className='  h-[5px] bg-white rounded-xl' style={{width:`${loader}%`}}></div>
            </div>

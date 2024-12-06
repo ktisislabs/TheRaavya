@@ -42,3 +42,9 @@
   background-attachment: fixed;
  
 }
+.Products-bgsection{
+  background-image: url('../src/Assets/Products.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

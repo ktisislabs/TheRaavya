@@ -22,7 +22,7 @@ function Navbar() {
        
         <div className='flex items-center gap-12 mr-12'>
       
-      <span className="flex items-center font-mono font-bold text-white gap-1"><FaCartShopping  className='text-white text-sm '/>(0)</span>
+      <span className="flex items-center font-mono font-bold text-white gap-1"></span>
       <IoHeart  className='text-white text-sm'/>
 
      </div> 

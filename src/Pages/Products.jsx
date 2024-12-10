@@ -111,6 +111,31 @@ function Products() {
       ))}
     </div>
   </div>
+  <section className="product-descsection w-full h-auto py-12 sm:py-16 flex flex-col items-center justify-center bg-cover bg-center">
+  <p className="text-[black] text-xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins text-center">
+    Subscribe to our NewsLetter !
+  </p>
+  <p className="text-[black] text-base sm:text-lg md:text-xl lg:text-2xl font-poppins text-center mt-2">
+  Subscribe to get access to the latest designs and product drops from TheRaavya.
+  </p>
+  
+  {/* Email Subscription Form */}
+  <div className="mt-6 w-full max-w-md px-4 sm:px-8">
+    <form className="flex flex-col sm:flex-row items-center gap-4">
+      <input
+        type="email"
+        className="w-full sm:flex-1 border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base font-poppins"
+        placeholder="Enter your email"
+      />
+      <button
+        type="submit"
+        className="px-6 py-3 bg-transparent border border-black text-black rounded-full hover:bg-black hover:text-white transition"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
 
   <Footer />
   <StickyNavbar />

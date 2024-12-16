@@ -11,12 +11,12 @@
 .Hammenu{
   display: none;
 }
-.Section-1-container {
-  background-image: url('../src/Assets/Homepage.jpg'); /* Correct path to your image */
+/* .Section-1-container {
+  background-image: url('../src/Assets/Homepage.jpg'); 
   background-size: contain;
   background-position: center;
   background-attachment: fixed;
-}
+} */
 .Section-2-container{
   background-image: url('../src/Assets/Section2.jpg'); /* Correct path to your image */
   background-size: cover;

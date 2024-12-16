@@ -12,6 +12,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoHeart } from "react-icons/io5";
 import Footer from '../components/Footer'
+import HomePageScene from '../components/Homepagescene';
 
 
 function Home() {
@@ -28,6 +29,7 @@ function Home() {
           className="Section-1-container w-screen h-screen bg-center bg-no-repeat bg-cover fix crazy-fade-in"
         >
           <Navbar />
+          <HomePageScene/>
           <div className="Hammenu">
             <HiMenuAlt3
               size={30}

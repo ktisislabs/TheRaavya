@@ -5,8 +5,10 @@ import { FaAmazon } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookF } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Footer() {
+  const whatsappLink = "https://wa.me/7701853700?text=Hi%20there!%20I%27m%20interested%20in%20learning%20more%20about%20your%20products.";
   return (
     <footer className="Footer-Section w-screen bg-[#9c8276] p-12 text-white">
       <div className="max-w-7xl mx-auto flex items-start justify-between ">
@@ -30,9 +32,11 @@ function Footer() {
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">Pages</h3>
           <ul className="space-y-2">
-            <li>About</li>
-            <li>Bulk Order</li>
-            <li>Contact</li>
+          <Link to='/Home '>  <li className="hover:underline cursor-pointer">Home</li></Link>
+          <Link to='/About'>  <li className="hover:underline cursor-pointer">About</li></Link>
+          <Link to='/Products'>  <li className="hover:underline cursor-pointer">Products</li></Link>
+          <Link to='/BulkOrder'> <li className="hover:underline cursor-pointer">Bulk Order</li></Link>
+         <Link to='/Contact'> <li className="hover:underline cursor-pointer">Contact</li></Link>
           </ul>
         </div>
 
@@ -40,8 +44,8 @@ function Footer() {
         <div className="flex flex-col gap-2">
           <h3 className="text-lg font-bold">Categories</h3>
           <ul className="space-y-2">
-            <li>Home Decor</li>
-            <li>Furniture</li>
+          <Link to='/Products'>  <li className="hover:underline cursor-pointer">Home Decor</li></Link>
+          <Link to='/Products'>  <li className="hover:underline cursor-pointer">Furniture</li></Link>
           </ul>
         </div>
 
@@ -67,10 +71,10 @@ function Footer() {
         <p>© 2024 Ktisis Labs. All rights reserved.</p>
         <div className="flex justify-center mt-2 space-x-4">
           {/* Add icon placeholders or links */}
-          <FaAmazon className="text-xl" />
-          <IoLogoWhatsapp className="text-xl"/>
-          <RiInstagramFill className="text-xl"/>
-          <FaFacebookF className="text-xl"/>
+          <a href='https://www.amazon.in/stores/page/31BEBC02-A059-4270-A214-BBD72A454047' target="_blank">   <FaAmazon className="text-xl" /></a>
+       <a href={whatsappLink} target="_blank">   <IoLogoWhatsapp className="text-xl"/> </a>
+          <a href="https://www.instagram.com/theraavya/" target='_blank'>   <RiInstagramFill className="text-xl"/></a>
+        <a href='http://facebook.com/theraavya' target="_blank">  <FaFacebookF className="text-xl"/></a>
         </div>
       </div>
     </footer>

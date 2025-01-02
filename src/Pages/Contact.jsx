@@ -8,6 +8,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import "../styles/Contact.css";
 import ContactDesc from "../Assets/contact-desc.jpg";
+import { Link } from "react-router-dom";
 
 function Contact() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -15,7 +16,7 @@ function Contact() {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
-
+  const whatsappLink = "https://wa.me/7701853700?text=Hi%20there!%20I%27m%20interested%20in%20learning%20more%20about%20your%20products.";
   return (
     <>
       <div className="contact-Section w-full h-full relative">
@@ -119,14 +120,14 @@ function Contact() {
               className="w-1/3 sm:w-1/4"
             />
             <p className="font-medium text-sm sm:text-base">
-              We’re here for you! Connect with us via phone or email, and our
+              We’re here for you! Connect with us via phone or Whatsapp, and our
               team will be happy to assist you.
             </p>
             <div className="flex justify-center space-x-4">
-              <FaAmazon className="text-xl" />
-              <IoLogoWhatsapp className="text-xl" />
-              <RiInstagramFill className="text-xl" />
-              <FaFacebookF className="text-xl" />
+                  <a href='https://www.amazon.in/stores/page/31BEBC02-A059-4270-A214-BBD72A454047' target="_blank">   <FaAmazon className="text-xl" /></a>
+                  <a href={whatsappLink} target="_blank">   <IoLogoWhatsapp className="text-xl"/> </a>
+                     <a href="https://www.instagram.com/theraavya/" target='_blank'>   <RiInstagramFill className="text-xl"/></a>
+                   <a href='http://facebook.com/theraavya' target="_blank">  <FaFacebookF className="text-xl"/></a>
             </div>
           </div>
         </div>
@@ -139,9 +140,9 @@ function Contact() {
             Ready to bring your dream space to life? TheRaavya: Your Home
             Creator is here to guide you every step of the way.
           </p>
-          <button className="px-6 py-3 mt-6 bg-white text-black rounded-full hover:bg-black hover:text-white">
+         <Link to='/Products'> <button className="px-6 py-3 mt-6 bg-white text-black rounded-full hover:bg-black hover:text-white">
             Shop Now
-          </button>
+          </button></Link>
         </section>
 
         <Footer />

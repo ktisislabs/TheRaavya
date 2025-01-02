@@ -1,29 +1,22 @@
-import React, { useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Html, useGLTF } from "@react-three/drei";
+import React, { useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 // Preload the model
 useGLTF.preload("/the_smoking_room.glb");
 
-// Component to load and display the GLB file with rotation
+// Component to load and display the GLB file
 const Scene = () => {
   const modelRef = useRef();
   const { scene } = useGLTF("/the_smoking_room.glb");
-
-  // Automatic rotation
-  useFrame(() => {
-    if (modelRef.current) {
-      modelRef.current.rotation.y += 0.0005; // Adjust speed of rotation
-    }
-  });
 
   // Adjust position and scale to fill the "room"
   return (
     <primitive
       object={scene}
       ref={modelRef}
-      scale={[10, 10, 10]} // Adjust scale for a bigger room effect
-      position={[-10, -20, 30]} // Adjust Y and Z to position the model properly
+      scale={[10, 10, 15]} // Adjust scale to fit the scene as in the screenshot
+      position={[-5, -20, 30]}  // Fine-tuned position to match the screenshot
     />
   );
 };
@@ -39,12 +32,12 @@ const HomePageScene = () => {
         position: "absolute",
         top: 0,
         left: 0,
-        zIndex: -1, // Push canvas behind other content
+        zIndex: 0, // Ensure it's behind other content
       }}
     >
       <Canvas
-        style={{ background: "transparent" }}
-        camera={{ position: [0, 0, 30], fov: 75 }} // Adjust camera position and field of view
+        style={{ background: "transparent", position: "absolute", top: 0, left: 0 }}
+        camera={{ position: [0, 0, 30], fov: 50 }} // Adjust camera position and field of view
       >
         {/* Lights */}
         <ambientLight intensity={0.8} />
@@ -52,9 +45,17 @@ const HomePageScene = () => {
         <directionalLight position={[-10, 10, 30]} intensity={1.5} />
 
         {/* 3D Scene */}
-        
-          <Scene />
-    
+        <OrbitControls
+          enableZoom={false}
+          enableRotate={true}
+          enablePan={true}
+          maxPolarAngle={Math.PI / 3 + 0.01} // Slightly above the horizon
+          minPolarAngle={Math.PI / 2 - 0.1} // Slightly below the horizon
+          minAzimuthAngle={-Math.PI / 96} // Very limited left rotation
+          maxAzimuthAngle={Math.PI / 56}  // Very limited right rotation
+        />
+
+        <Scene />
       </Canvas>
 
       {/* Overlayed HTML content */}
@@ -64,11 +65,9 @@ const HomePageScene = () => {
           top: "10px",
           left: "10px",
           color: "white",
-          zIndex: 1,
+          zIndex: 2, // Ensure it is on top of the canvas
         }}
-      >
-        <h1>Welcome to the Smoking Room</h1>
-      </div>
+      ></div>
     </div>
   );
 };

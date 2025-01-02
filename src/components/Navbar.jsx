@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom' ;
 function Navbar() {
   return (
     <>      
-      <nav className='Navbar-container  flex items-center justify-center w-screen p-0 m-0 fixed
+      <nav className='Navbar-container absolute z-10 flex items-center justify-center w-screen p-0 m-0 fixed
       bg-[#9c8276]
        '>
       
@@ -20,12 +20,7 @@ function Navbar() {
         <Link to='/BulkOrder'> <p className='font-poppins text-white text-sm font-medium'>Bulk Order</p></Link>
         <Link to='/Contact'> <p className='font-poppins text-white text-sm font-medium'>Contact</p></Link>
        
-        <div className='flex items-center gap-12 mr-12'>
-      
-      <span className="flex items-center font-mono font-bold text-white gap-1"></span>
-      <IoHeart  className='text-white text-sm'/>
-
-     </div> 
+       
       
        </div> 
        

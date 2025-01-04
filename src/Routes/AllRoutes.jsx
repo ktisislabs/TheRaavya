@@ -15,7 +15,7 @@ function AllRoutes() {
     <Route path='/Home' element={<Home/>}/>
     <Route path='/About' element={<About/>}/>
     <Route path='/Products' element={<Products/>}/>
-    <Route path='/BulkOrder' element={<BulkOrder/>}/>
+    {/* <Route path='/BulkOrder' element={<BulkOrder/>}/> */}
     <Route path='/Contact' element={<Contact/>}/>
 </Routes>
 

@@ -35,7 +35,7 @@ function Footer() {
           <Link to='/Home '>  <li className="hover:underline cursor-pointer">Home</li></Link>
           <Link to='/About'>  <li className="hover:underline cursor-pointer">About</li></Link>
           <Link to='/Products'>  <li className="hover:underline cursor-pointer">Products</li></Link>
-          <Link to='/BulkOrder'> <li className="hover:underline cursor-pointer">Bulk Order</li></Link>
+          {/* <Link to='/BulkOrder'> <li className="hover:underline cursor-pointer">Bulk Order</li></Link> */}
          <Link to='/Contact'> <li className="hover:underline cursor-pointer">Contact</li></Link>
           </ul>
         </div>

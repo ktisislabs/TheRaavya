@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import { HiMenuAlt3 } from "react-icons/hi";
 import { FaCartShopping, FaAmazon, FaFacebookF } from "react-icons/fa6";
@@ -9,18 +9,37 @@ import Footer from '../components/Footer';
 import StickyNavbar from '../components/StickyNavbar';
 import {FurnitureData} from '../Data/Furniture'
 import{HomeDecorData} from '../Data/HomeDecor';
+import { useForm, ValidationError } from '@formspree/react';
+import {Toaster,toast} from "react-hot-toast";
 
 function Products() {
 
   const [openMenu, setOpenMenu] = useState(false);
+  const [state, handleSubmit] = useForm("xyzzbnle");
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
+
+
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Thank you for reaching out to us!", {
+        duration: 4000,
+        position: "bottom-center",
+      });
+    }
+  }, [state.succeeded]);
+
+
+
+
+
   return (
     <>
 
-<div className="Products-Container overflow-y-scroll relative w-screen min-h-screen">
+<div className="Products-Container overflow-y-auto overflow-x-hidden relative w-screen h-screen">
   <Navbar />
   <div className="Hammenu">
     <HiMenuAlt3
@@ -37,8 +56,8 @@ function Products() {
   </section>
   
   <div className="Furniture-Products w-screen h-auto px-8 py-12">
-    <h2 className="text-4xl font-bold text-center mb-12 font-poppins text-gray-800">
-      Home Decor Collection
+    <h2 className="text-3xl font-medium text-center mb-12 font-sans text-gray-800">
+       Best Selling Products
     </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {HomeDecorData.map((item) => (
@@ -121,12 +140,15 @@ function Products() {
   
   {/* Email Subscription Form */}
   <div className="mt-6 w-full max-w-md px-4 sm:px-8">
-    <form className="flex flex-col sm:flex-row items-center gap-4">
+    <form className="flex flex-col sm:flex-row items-center gap-4" onSubmit={handleSubmit}>
       <input
         type="email"
+        name='email'
+        id='email'
         className="w-full sm:flex-1 border border-gray-300 rounded-lg px-4 py-2 text-sm sm:text-base font-poppins"
         placeholder="Enter your email"
       />
+      <Toaster/>
       <button
         type="submit"
         className="px-6 py-3 bg-transparent border border-black text-black rounded-full hover:bg-black hover:text-white transition"

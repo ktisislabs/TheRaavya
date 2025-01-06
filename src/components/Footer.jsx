@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Mainlogo from "../Assets/Mainlogo.png";
 import { IoMdMail } from "react-icons/io";
 import { FaAmazon } from "react-icons/fa";
@@ -6,19 +6,36 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookF } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useForm, ValidationError } from '@formspree/react';
+import {Toaster,toast} from "react-hot-toast";
+
 
 function Footer() {
+
+  const [state, handleSubmit] = useForm("xjkkpapn");
+
+ useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Thank you for reaching out to us!", {
+        duration: 4000,
+        position: "bottom-center",
+      });
+    }
+  }, [state.succeeded]);
+
   const whatsappLink = "https://wa.me/7701853700?text=Hi%20there!%20I%27m%20interested%20in%20learning%20more%20about%20your%20products.";
   return (
     <footer className="Footer-Section w-screen bg-[#9c8276] p-12 text-white">
       <div className="max-w-7xl mx-auto flex items-start justify-between ">
         {/* Logo and Email Section */}
-        <div className="Footer-1 flex flex-col gap-4">
+        <form className="Footer-1   p-2 flex flex-col gap-4" onSubmit={handleSubmit}>
           <img src={Mainlogo} alt="Logo" className="w-36 mx-auto" />
-          <p className="text-center text-[#fff0db]">Drop your mail and reach out to us</p>
+          <p className="text-center text-[#fff0db]">Subscribe to Raavya for latest updates</p>
           <div className="relative">
             <input
               type="email"
+              id='email'
+              name="email"
               placeholder="Enter your E-mail"
               className="w-full p-3 pl-4 rounded-md bg-[#fff0db] text-[#9c8276] placeholder-[#9c8276] outline-none"
             />
@@ -26,7 +43,7 @@ function Footer() {
               <IoMdMail size={20} />
             </button>
           </div>
-        </div>
+        </form>
 
         {/* Pages Section */}
         <div className="flex flex-col gap-2">
